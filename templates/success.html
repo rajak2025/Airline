@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success!
+{% endblock %}
+
+{% block links %}
+<a href="{{ url_for('index') }}">Book a Flight</a><br>
+<a href="{{ url_for('flights') }}">All Flights</a>
+{% endblock%}
+
+{% block body %}
+    <h1>Success!</h1>
+
+    You have successfully booked your flight.
+{% endblock %}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <style>
+            h1 {
+	            font-family:Verdana, Arial, Helvetica, sans-serif;
+	            font-size:16px;
+	            font-weight:bold;
+	            margin:0;
+	            padding:5px;
+	        }
+
+            hr {
+	            border:none;
+	            border-top:1px solid #CCCCCC;
+	            height:1px;
+	            margin-bottom:25px;
+	        }
+
+            #demo-container{
+	            padding:25px 15px 15px 15px;
+	            background:#67A897;
+	        }
+
+            ul#simple-menu{
+	            list-style-type:none;
+	            width:100%;
+	            position:relative;
+	            height:27px;
+	            font-family:"Trebuchet MS",Arial,sans-serif;
+	            font-size:13px;
+	            font-weight:bold;
+	            margin:0;
+	            padding:11px 0 0 0;
+	        }
+
+            ul#simple-menu li{
+	            display:block;
+	            float:left;
+	            margin:0 0 0 4px;
+	            height:27px;
+	        }
+
+            ul#simple-menu li.left{
+            	margin:0;
+	        }
+
+            ul#simple-menu li a{
+	            display:block;
+	            float:left;
+	            color:#fff;
+	            background:#4A6867;
+	            line-height:27px;
+	            text-decoration:none;
+	            padding:0 17px 0 18px;
+	            height:27px;
+	        }
+
+            ul#simple-menu li a.right{
+	            padding-right:19px;
+	        }
+
+            ul#simple-menu li a:hover{
+            	background:#2E4560;
+	        }
+
+            ul#simple-menu li a.current{
+            	color:#2E4560;
+	            background:#fff;
+	        }
+
+            ul#simple-menu li a.current:hover{
+            	color:#2E4560;
+	            background:#fff;
+	        }
+
+            body {
+		        background-image: url("th.jpg");
+		        background-color: #cccccc;
+		        background-size: auto;
+		        background-attachment: fixed;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div id="demo-container" >
+            <ul id="simple-menu">
+              <h1>Airlines</h1>
+              <li><a href="{{url_for('intro')}}" ><span>Home</span></a></li>
+              <li><a href="{{url_for('index')}}"><span>Book a Flight</span></a></li>
+              <li><a href="{{url_for('flights')}}"><span>All Fligths</span></a></li>
+              <li><a rel="nofollow" target="_blank" href="http://github.com/rajak2025" title="rajashekarkasturi.com"><span>Contact</span></a></li>
+            </ul>
+            <br><br>
+            
+        </div>
+
+    </br>
+
+       <div id="main"> 
+            <div class="container">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>
+
